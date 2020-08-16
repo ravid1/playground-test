@@ -7,7 +7,7 @@ var express     = require('express'),
     states      = JSON.parse(fs.readFileSync('data/states.json', 'utf-8')),
     inContainer = process.env.CONTAINER,
     inAzure = process.env.WEBSITE_RESOURCE_GROUP,
-    port = process.env.PORT || 8080;
+    port = process.env.PORT || 5000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
