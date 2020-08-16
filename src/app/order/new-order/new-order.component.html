@@ -1,0 +1,34 @@
+<div class="new-order-container">
+  <form (submit)="submit()" [formGroup]="productForm" class="product-form">
+    <div class="form-element">
+      <label>Customer</label>
+      <p-dropdown [options]="customers"
+                  optionLabel="fullName"
+                  styleClass="customers-dropdown"
+                  formControlName="customer"></p-dropdown>
+      <cm-error-msg-handler [control]="productForm.controls.customer" [errorMsg]="'Customer Name is required'"></cm-error-msg-handler>
+    </div>
+    <ng-container *ngFor="let row of productForm.get('items')?.controls; let i = index; let first = first; let last = last;" [formArrayName]="'items'">
+      <div class="product-container" [formGroup]="row">
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" class="form-control" formControlName="productName">
+          <cm-error-msg-handler [control]="row.controls.productName" [errorMsg]="'Product Name is required'"></cm-error-msg-handler>
+        </div>
+        <div class="form-group">
+          <label>Product Price</label>
+          <input type="number" [min]="0" class="form-control" formControlName="price">
+          <cm-error-msg-handler [control]="row.controls.price" [errorMsg]="'Price is reuired'"></cm-error-msg-handler>
+        </div>
+        <div class="action-buttons">
+          <span *ngIf="!first" class="glyphicon glyphicon-minus" (click)="removeRow(i)"></span>
+          <span *ngIf="last" class="glyphicon glyphicon-plus" (click)="addRow()"></span>
+        </div>
+      </div>
+    </ng-container>
+    <div class="total-price-container">
+      <span class="total">Total: {{totalPrice | number}}$</span>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="productForm.invalid">Send</button>
+  </form>
+</div>

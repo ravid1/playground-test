@@ -13,8 +13,8 @@ main {
 }
 
 /* Ensure display:flex and others don't override a [hidden] */
-[hidden] { 
-    display: none !important; 
+[hidden] {
+    display: none !important;
 }
 
 th {
@@ -170,7 +170,7 @@ a:hover, a:focus {
     border-top:6px solid rgba(0,174,239,.8);
     border-radius:100%;
   }
-  
+
   @-webkit-keyframes rotation {
     from {-webkit-transform: rotate(0deg);}
     to {-webkit-transform: rotate(359deg);}

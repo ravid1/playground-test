@@ -106,6 +106,11 @@ export class DataService {
         }
     }
 
+    insertOrder(order, id) {
+      return this.http.put<IApiResponse>(`${this.ordersBaseUrl}/${id}`, order)
+        .pipe(catchError(this.handleError));
+    }
+
     // Not using now but leaving since they show how to create
     // and work with custom observables
 
@@ -118,6 +123,6 @@ export class DataService {
     //         observer.complete();
     //     });
     // }
-    
+
 
 }

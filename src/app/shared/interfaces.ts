@@ -15,6 +15,16 @@ export interface ICustomer {
     longitude?: number;
 }
 
+export interface ICustomersOrderList {
+  id: number;
+  fullName: string;
+}
+
+export interface INewOrder {
+  id: number;
+  items: any[];
+}
+
 export interface IMapDataPoint {
     longitude: number;
     latitutde: number;

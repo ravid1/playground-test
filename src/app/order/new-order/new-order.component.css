@@ -1,0 +1,47 @@
+.form-element {
+  margin-bottom: 15px;
+}
+
+.product-container {
+  display: flex;
+  position: relative;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.product-container .form-group:nth-child(2) {
+  margin-left: 20px;
+}
+
+.form-group .ng-invalid  {
+  border-left: 5px solid #a94442;
+}
+
+.form-group .ng-valid {
+  border-left: 5px solid #42A948;
+}
+
+.action-buttons {
+  position: absolute;
+  right: -56px;
+  top: 31px;
+}
+
+.glyphicon {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.total-price-container {
+  height: 34px;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #cccccc;
+}
+
+.total {
+  padding: 9px 10px;
+}
