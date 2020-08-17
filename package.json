@@ -32,7 +32,8 @@
     "primeng": "^10.0.0-rc.3",
     "rxjs": "~6.6.2",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.3"
+    "zone.js": "~0.10.3",
+    "opn": "5.5.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.0",
